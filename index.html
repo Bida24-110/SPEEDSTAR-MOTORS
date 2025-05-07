@@ -2,23 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Message Page</title>
+  <title>Makeup Products Glide</title>
   <style>
     body {
-      background-color: #111;
-      color: #f00;
+      margin: 0;
+      padding: 0;
+      background: #fff0f5;
       font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-size: 3em;
+    }
+
+    .slider-container {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      background: #ffe6f0;
+      padding: 20px 0;
+    }
+
+    .slider-track {
+      display: inline-block;
+      animation: glide 20s linear infinite;
+    }
+
+    .product {
+      display: inline-block;
+      margin: 0 30px;
+    }
+
+    .product img {
+      width: 120px;
+      height: 120px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .product img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes glide {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
   </style>
 </head>
 <body>
-  <div>
-    <p>Hello there 👋</p>
+
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Lipstick" alt="Lipstick"></div>
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Foundation" alt="Foundation"></div>
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Mascara" alt="Mascara"></div>
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Blush" alt="Blush"></div>
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Eyeliner" alt="Eyeliner"></div>
+      <div class="product"><img src="https://via.placeholder.com/120x120?text=Brushes" alt="Brushes"></div>
+      <!-- Repeat if needed to make the loop smoother -->
+    </div>
   </div>
+
 </body>
 </html>
