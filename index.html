@@ -2,15 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Makeup Products Glide</title>
+  <title>Glow Beauty</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: #fff0f5;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
     }
 
+    /* Header */
+    header {
+      background-color: #ff66b2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Slider */
     .slider-container {
       overflow: hidden;
       white-space: nowrap;
@@ -21,7 +50,11 @@
 
     .slider-track {
       display: inline-block;
-      animation: glide 20s linear infinite;
+      animation: glide 20s linear infinite alternate;
+    }
+
+    .slider-container:hover .slider-track {
+      animation-play-state: paused;
     }
 
     .product {
@@ -32,8 +65,8 @@
     .product img {
       width: 120px;
       height: 120px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
       transition: transform 0.3s;
     }
 
@@ -49,30 +82,82 @@
         transform: translateX(-100%);
       }
     }
+
+    /* Products Section */
+    .products-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      font-size: 2rem;
+      color: #cc0066;
+      margin-bottom: 20px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 200px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #cc0066;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #ff99cc;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    footer .socials {
+      margin: 10px 0;
+    }
+
+    footer .socials span {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
-  <div class="slider-container">
-    <div class="slider-track">
-      <div class="product"><img src="lipstick.jpg" alt="Lipstick"></div>
-      <div class="product"><img src="foundation.jpg" alt="Foundation"></div>
-      <div class="product"><img src="mascara.jpg" alt="Mascara"></div>
-      <div class="product"><img src="blush.jpg" alt="Blush"></div>
-      <div class="product"><img src="liner.jpg" alt="Eyeliner"></div>
-      <div class="product"><img src="brushes.jpg" alt="Brushes"></div>
-        <!-- Duplicates for smooth looping -->
-      <div class="product"><img src="lipstick.jpg" alt="Lipstick"></div>
-      <div class="product"><img src="foundation.jpg" alt="Foundation"></div>
-       <div class="product"><img src="mascara.jpg" alt="Mascara"></div>
-      <div class="product"><img src="blush.jpg" alt="Blush"></div>
-      <div class="product"><img src="liner.jpg" alt="Eyeliner"></div>
-      <div class="product"><img src="brushes.jpg" alt="Brushes"></div>
-    </div>
-    </div>
-  </div>
 
-</body>
-</html>
+  <!-- Header -->
   <header>
     <h1>Glow Beauty</h1>
     <nav>
@@ -82,21 +167,35 @@
       <a href="#">Contact</a>
     </nav>
   </header>
-   <section class="products-section">
+
+  <!-- Gliding Product Slider -->
+  <div class="slider-container">
+    <div class="slider-track">
+      <div class="product"><img src="lipstick.jpg" alt="Lipstick"></div>
+      <div class="product"><img src="foundation.jpg" alt="Foundation"></div>
+      <div class="product"><img src="mascara.jpg" alt="Mascara"></div>
+      <div class="product"><img src="blush.jpg" alt="Blush"></div>
+      <div class="product"><img src="liner.jpg" alt="Eyeliner"></div>
+      <div class="product"><img src="brushes.jpg" alt="Brushes"></div>
+    </div>
+  </div>
+
+  <!-- Products Section -->
+  <section class="products-section">
     <h2>Featured Products</h2>
     <div class="product-grid">
       <div class="product-card">
-        <img src="lipstick.jpg" alt="Matte Lipstick">
+        <img src="https://via.placeholder.com/200?text=Matte+Lipstick" alt="Matte Lipstick">
         <h3>Matte Lipstick</h3>
         <p>Long-lasting matte finish available in 12 shades.</p>
       </div>
       <div class="product-card">
-        <img src="foundation.jpg" alt="Liquid Foundation">
+        <img src="https://via.placeholder.com/200?text=Liquid+Foundation" alt="Liquid Foundation">
         <h3>Liquid Foundation</h3>
         <p>Lightweight and blendable for a flawless look.</p>
       </div>
       <div class="product-card">
-        <img src="mascara.jpg" alt="Mascara">
+        <img src="https://via.placeholder.com/200?text=Waterproof+Mascara" alt="Mascara">
         <h3>Waterproof Mascara</h3>
         <p>Smudge-proof volume and curl all day long.</p>
       </div>
@@ -113,20 +212,6 @@
     </div>
     <p>&copy; 2025 Glow Beauty. All rights reserved.</p>
   </footer>
-  <div class="slider-container">
-    <div class="slider-track">
-      <div class="product"><img src="lipstick.jpg" alt="Lipstick"></div>
-      <div class="product"><img src="foundation.jpg" alt="Foundation"></div>
-      <div class="product"><img src="mascara.jpg" alt="Mascara"></div>
-      <div class="product"><img src="blush.jpg" alt="Blush"></div>
-      <div class="product"><img src="liner.jpg" alt="Eyeliner"></div>
-      <div class="product"><img src="brushes.jpg" alt="Brushes"></div>
-        <!-- Duplicates for smooth looping -->
-      <div class="product"><img src="lipstick.jpg" alt="Lipstick"></div>
-      <div class="product"><img src="foundation.jpg" alt="Foundation"></div>
-    </div>
-    </div>
-  </div>
 
 </body>
 </html>
