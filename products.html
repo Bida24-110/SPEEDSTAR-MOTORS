@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products & Prices - Glow Beauty</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff66b2;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .products-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .products-section h2 {
+      font-size: 2rem;
+      color: #cc0066;
+      margin-bottom: 30px;
+    }
+
+    .product-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 20px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .product-card h3 {
+      margin: 10px 0 5px;
+      color: #cc0066;
+    }
+
+    .product-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .price {
+      font-weight: bold;
+      color: #000;
+      margin-top: 5px;
+    }
+
+    footer {
+      background-color: #ff99cc;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 50px;
+    }
+
+    footer .socials {
+      margin: 10px 0;
+    }
+
+    footer .socials span {
+      margin: 0 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Glow Beauty</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="products.html">Products</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Log In</a>
+    </nav>
+  </header>
+
+  <!-- Products Section -->
+  <section class="products-section">
+    <h2>Our Products & Prices</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="red.jpg" alt="Matte Lipstick">
+        <h3>Matte Lipstick</h3>
+        <p>Long-lasting matte finish in 12 vibrant shades.</p>
+        <p class="price">P75.00</p>
+      </div>
+      <div class="product-card">
+        <img src="foundation.jpg" alt="Liquid Foundation">
+        <h3>Liquid Foundation</h3>
+        <p>Lightweight & blendable for a flawless look.</p>
+        <p class="price">P120.00</p>
+      </div>
+      <div class="product-card">
+        <img src="mascara.jpg" alt="Mascara">
+        <h3>Waterproof Mascara</h3>
+        <p>Smudge-proof volume & curl that lasts all day.</p>
+        <p class="price">P85.00</p>
+      </div>
+      <div class="product-card">
+        <img src="blush.jpg" alt="Blush">
+        <h3>Rosy Blush</h3>
+        <p>Gives a natural and healthy glow.</p>
+        <p class="price">P65.00</p>
+      </div>
+      <div class="product-card">
+        <img src="liner.jpg" alt="Eyeliner">
+        <h3>Liquid Eyeliner</h3>
+        <p>Precision tip for perfect lines.</p>
+        <p class="price">P55.00</p>
+      </div>
+      <div class="product-card">
+        <img src="brushes.jpg" alt="Brush Set">
+        <h3>Makeup Brush Set</h3>
+        <p>Set of 7 professional-grade brushes.</p>
+        <p class="price">P150.00</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with us:</p>
+    <div class="socials">
+      <span>📸</span>
+      <span>📘</span>
+      <span>🐦</span>
+    </div>
+    <p>&copy; 2025 Glow Beauty. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
